@@ -1,0 +1,37 @@
+.menu-container{
+    position: relative;
+    width: 300px;
+    padding: 14px;
+    font-family: "Microsoft JhengHei";
+    padding-bottom: 7px;
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    transition: height 0s;
+}
+
+.menu-title{
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #00a0e9;
+    cursor: pointer;
+}
+
+.menu-btn{
+    position: absolute;
+    right: 7px;
+    top: 33px;
+    background-color: transparent;
+    border:none;
+    color: #00a0e9;
+    outline: none;
+}
+
+.menu{
+    display: none;
+}
+
+.menu-item{
+    margin-bottom: 7px;
+    padding-left: 26px;
+    list-style: none;
+}
