@@ -24,7 +24,8 @@ function Menu(menuItemWording){
     let isOpen = false;
     menuBtn.setAttribute('class',"menu-btn");
     menuBtn.textContent="V";
-    menuBtn.onclick = function() {
+
+    this.setIsOpen = function() {
         // 「!」會把true變false，false變true
         isOpen = !isOpen;
 
@@ -36,10 +37,17 @@ function Menu(menuItemWording){
             menu.style.display = "none";
             menuBtn.textContent="V";
         }  
+    };
+
+    const self = this;
+
+    menuBtn.onclick = function(){
+        self.setIsOpen();
     }
 
     menuContainer.appendChild(menuBtn);
     menuContainer.appendChild(menu);
 
-    return menuContainer;
+    // getMenu把包住menu的元素return出去
+    this.getMenu = () => menuContainer;
 }

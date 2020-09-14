@@ -6,6 +6,13 @@ let menuItemWording=[
     "Like的留言"
 ];
 
-const MenuInstance = new Menu(menuItemWording);
+let menuInstance = new Menu(menuItemWording);
 
-document.getElementById('root').appendChild(MenuInstance);
+const controlBtn = document.createElement('button');
+controlBtn.onclick = function(){
+    menuInstance.setIsOpen();
+};
+controlBtn.textContent = "開啟選單";
+
+document.getElementById('root').appendChild(controlBtn);
+document.getElementById('root').appendChild(menuInstance.getMenu());
